@@ -10,7 +10,12 @@ public class AnimationTest : MonoBehaviour
 	{
 		if (Input.GetButtonDown("Jump"))
 		{
-			//myAnimator.SetBool("OpenDoor",);
+			myAnimator.SetBool("OpenDoor", true);
+		}
+
+		if (Input.GetKeyDown(KeyCode.F))
+		{
+			myAnimator.SetBool("OpenDoor", false);
 		}
 	}
 }
