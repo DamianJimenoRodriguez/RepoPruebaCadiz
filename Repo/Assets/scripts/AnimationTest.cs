@@ -8,5 +8,9 @@ public class AnimationTest : MonoBehaviour
 
 	private void Update()
 	{
+		if (Input.GetButtonDown("Jump"))
+		{
+			//myAnimator.SetBool("OpenDoor",);
+		}
 	}
 }
