@@ -157,7 +157,9 @@ MonoBehaviour:
   endPanel: {fileID: 661418262}
   timeLeftText: {fileID: 782383732}
   playTime: 10
+  targetNumberOfClick: 10
   numberOfClicksText: {fileID: 1007804741}
+  gameOverText: {fileID: 798957724}
 --- !u!4 &253698094
 Transform:
   m_ObjectHideFlags: 0
