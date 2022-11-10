@@ -11,27 +11,23 @@ public class Health : MonoBehaviour
 
 	private Vector3 InitialPosition;
 
-	public Text healthText;
+	public Image healthBar;
+
+	public void UpdateHealtBar()
+	{
+		healthBar.fillAmount = Mathf.InverseLerp(0, MaxHealth, currentHealth);
+	}
 
 	private void Start()
 	{
 		InitialPosition = transform.position;
 		currentHealth = MaxHealth;
-
-		if (healthText != null)
-		{
-			healthText.text = currentHealth.ToString();
-		}
+		UpdateHealtBar();
 	}
 
 	public void TakeDamage(int damageTaken)
 	{
 		currentHealth -= damageTaken;
-
-		if (healthText != null)
-		{
-			healthText.text = currentHealth.ToString();
-		}
 
 		if (currentHealth <= 0)
 		{
@@ -43,6 +39,7 @@ public class Health : MonoBehaviour
 		{
 			Debug.Log("me han echo daño, salud restante " + currentHealth);
 		}
+		UpdateHealtBar();
 	}
 
 	public virtual void Die()
